@@ -1,0 +1,120 @@
+<style>
+  .carousel{
+    margin-top: 53px;
+  }
+
+
+.item img {
+  background-color: red;
+  background-size:100% auto;
+}
+@media(max-width:800px){
+  .item img {
+    background-size:800px 300px;
+    min-height: 300px;
+  } 
+}
+    </style>
+    <div class="container">
+      
+   <!-- Carousal code -->
+   <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top:51px;">
+      <!-- Indicators 
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol> -->
+  
+      <!-- Wrapper for slides -->
+      <!-- <div class="carousel-inner">
+        <div class="item active">
+          <img src="app/images/new_apple.jpg" alt="Los Angeles" height="250" width="200">
+        </div>
+  
+        <div class="item">
+          <img src="app/images/samsung-white.jpg" alt="Chicago" height="250" width="200">
+        </div>
+      
+        <div class="item">
+          <img src="app/images/pixel.jpg" alt="New york"  height="250" width="200">
+        </div>
+      </div>
+  
+      <!-- Left and right controls 
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div> -->
+
+    <!-- end of Carousal -->
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+          <div class="item active">
+              <img class="first-slide" src="app/images/pixel.jpg" alt="First slide">
+          </div>
+          <div class="item">
+              <img class="second-slide" src="app/images/samsung-white.jpg" alt="Second slide">
+          </div>
+          <div class="item">
+              <img class="third-slide" src="app/images/new_apple.jpg" alt="Third slide">
+          </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>
+  </div><!-- /.carousel -->
+
+<div class="row" style="margin-top:50px; padding-top:10px">
+    <div style="text-align:center">
+             <h2>{{title}}</h2>       
+         </div> 
+<div class="col-md-4" *ngFor='let product of products'>
+    <div style="text-align: center; margin-top:10px">
+            <img  [src]=product.image height="250px">
+        </div>
+<div (click)="getMobileDetails(product.pid)" style="cursor:pointer;color:Steelblue;text-align: center; margin-top:10px"><b><span id="pName0">{{product.name}}</span></b></div>
+<div style="color:rgb(2, 7, 10);text-align: center; margin-top:5px"><b><span id="pName0">{{product.price}}</span></b></div>
+<div style="color:rgb(2, 7, 10);text-align: center; margin-top:5px"><b><span id="pName0">{{product.status}}</span></b></div>
+<!-- <div style="padding-top:10px;padding-left: 260px;"><b>Price:</b><span id="pPrice0">{{product.price}}</span></div> -->
+<!-- <div style="padding-left: 250px;"><b>Status:</b><span id="pAvailable0" >{{product.status}}</span></div> -->
+</div></div>
+<div class="container" *ngIf="child">
+  <h2>Mobiles List</h2>
+  
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Color</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of mobiles">
+        <td><a></a>{{a.id}}</td>
+    <td><a (click)="idDetails(a.id)">{{a.name}}</a></td>
+        <td>{{a.color}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<router-outlet></router-outlet>

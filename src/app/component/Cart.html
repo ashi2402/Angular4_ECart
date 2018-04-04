@@ -1,0 +1,92 @@
+<style>
+    .navbar-inverse {
+ background-color:#005580;
+ background-image: none;
+ background-repeat: no-repeat;
+   color:#ffffff;
+}
+.navbar-inverse .navbar-nav > .active > a {
+   color: #ffffff;
+   background-color:transparent;
+   
+}
+.navbar-inverse .navbar-nav > li > a:hover{
+    text-decoration: none;
+  
+}
+
+.panel panel-primary{
+background-color:#005580;
+}
+
+.table {
+   width: 100%;
+   max-width: 100%;   
+}
+    </style>  
+    <div class="container">
+        <!-- <nav class="navbar navbar-inverse navbar-fixed-top">
+ 
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Mobile Cart</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a [routerLink]='["/list"]'>Dashboard</a></li>
+            <li><a [routerLink]='["/main"]'>Home</a></li>
+            <!-- <li><a [routerLink]='["/mobile"]'>Details</a></li> -->
+            <!-- <li>{{greetMessage}}</li>
+          </ul>
+        
+         <ul class="nav navbar-nav navbar-middle navbar-right">
+        <li><a [routerLink]='[""]' >Logout</a></li>
+       </ul>
+      </div>   
+    </nav>  -->
+<div class='panel panel-primary'
+style="position: relative; top: 100px; left: 300px; align: center; width: 50%" id="cart">
+<div class='panel-heading'>MobileCart</div>
+<div class='panel-body' style="margin-left: 0px;">    
+    <table class='table'  id="cartTable" align="center" style="margin-left: 125px; width: auto; margin-bottom: 0px; margin-right: 0px">
+                <thead>
+                <tr style="color: blue">
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total Price</th>                        
+                </tr>
+                <tr>
+                    <td id="mobileName">{{cartData.cartName}}</td>
+                    <td> <select [(ngModel)] = "selection" (change)="selectionChanged()">
+                            <!-- <option *ngFor="let c of mobCount" [value]="c.val">{{c.val}}</option> -->
+                            <option [value]="1">1</option>
+                            <option [value]="2">2</option>
+                            <option [value]="3">3</option>
+                        </select></td>
+                    <td id="mobilePrice">{{cartData.cartPrice}}</td>
+                    <td id="totalPrice">{{finalPrice}}</td>
+                </tr>
+            </thead>
+            <tbody> 
+            </tbody>
+        </table>
+</div>
+<div class='panel-footer'>
+        <button type="button" class="btn btn-default" 
+                                style="color: #ff0080;margin-left: 150px;" [routerLink]='["/mobile"]'>
+                                <span  class="glyphicon glyphicon-shopping-cart"></span> Continue
+                                Shopping
+                            </button>
+                        
+                            <button type="button" class="btn btn-success" [routerLink]='["/check"]' >
+                                Checkout <span class="glyphicon glyphicon-play"></span>
+                            </button>
+    </div>
+</div>
+</div>

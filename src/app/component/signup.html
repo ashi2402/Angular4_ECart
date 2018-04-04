@@ -1,0 +1,26 @@
+<div class='panel panel-primary'
+style="position: relative; top: 100px; left: 40%; align: center; width: 444px" id="cart">
+<div class='panel-heading'>Registration </div>
+<div class='panel-body'>    
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h3>{{title}}</h3>      
+      <!-- <span>{{creadencials}}</span> -->
+          <form (ngSubmit)="saveData(loginForm)" #loginForm="ngForm">
+      <div class="form-group">
+        <label for="name">User Name</label>
+        <input type="text" [(ngModel)]="name" name="name" class="form-control" id="name" required placeholder="Enter Name">
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" [(ngModel)]="password" name="password" class="form-control" id="password" placeholder="Enter Password">
+      </div>
+  
+      <button type="submit" class="btn btn-success">Register</button>
+      <button (click)="log()" class="btn btn-success">Login</button>
+    </form>
+    <!-- {{loginForm.value | json}} -->
+    </div>
+  </div>
+</div>

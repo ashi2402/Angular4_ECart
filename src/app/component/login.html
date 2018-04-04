@@ -1,0 +1,70 @@
+<style>
+  /* #signup {
+    margin-left: 791px;
+   
+  } */
+
+</style>
+<div class="container-fluid">
+  <!-- <nav class="navbar navbar-inverse navbar-fixed-top">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" *ngIf="userValidation.length!=0">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Mobile Cart</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a [routerLink]='["/list"]'>Dashboard</a></li>
+        <li><a [routerLink]='["/main"]'>Home</a></li>
+       <!-- <li><a [routerLink]='["/mobile"]'>Details</a></li> -->
+        <!-- <li>{{greetMessage}}</li>
+      </ul>
+    <!--/.nav-collapse-->
+     <!-- <ul class="nav navbar-nav navbar-middle navbar-right">
+         <li>Hello, {{userVal}}</li>
+    <li><a [routerLink]='[""]' >Logout</a></li>
+   </ul>
+  </div>   
+</nav> -->
+<!-- panel body -->
+<div class='panel panel-primary'
+style="position: relative; top: 100px; left: 40%; align: center; width: 444px" id="cart">
+<div class='panel-heading'>Login</div>
+<div class='panel-body'>    
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <!-- <span>{{creadencials}}</span> -->
+          <form (ngSubmit)="saveData(loginForm)" #loginForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" [(ngModel)]="name" name="name" class="form-control" id="name" required placeholder="Enter Name">
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" [(ngModel)]="password" name="password" class="form-control" id="password" placeholder="Enter Password">
+      </div>
+  
+      <button type="submit" class="btn btn-success">Submit</button>
+  
+    </form>
+    <!-- {{loginForm.value | json}} -->
+    </div>
+  </div>
+</div>
+<div class='panel-footer' >
+  <div id="signup" style="margin-left:70px">
+      <span><b>New User Sign Up</b></span>                    
+      <button type="button"  class="btn btn-success" [routerLink]='["/sign"]'  >
+          Signup </button>
+  </div>
+  
+    </div>
+</div>
+</div>
+  
