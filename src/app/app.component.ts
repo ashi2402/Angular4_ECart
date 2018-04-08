@@ -45,7 +45,7 @@ export class AppComponent{
     this.name = this.userService.getUserName();
     this.userValidation = this.userService.getUserName();
   }
-logOut(){
+ logOut(){
   this.userService.setUserName('');
   this.router.navigate(['']);
 
