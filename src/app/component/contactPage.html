@@ -1,0 +1,17 @@
+
+
+<div class="container" [ngStyle]="{'margin-top':'50px'}">
+    <form (ngSubmit)="contact()" [formGroup]="form">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" formControlName="name" required placeholder="Enter Name">
+          </div>
+      
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" formControlName="password" required  placeholder="Enter Password">
+          </div>
+      
+          <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>

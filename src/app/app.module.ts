@@ -2,7 +2,7 @@ import { NgModule }      from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent }  from './app.component';
 import { appRoutes }  from './component/route';
 import { productDisplay } from './component/product.display';
@@ -18,11 +18,12 @@ import {OnlyLoggedInUsersGuard} from './component/services/loggedInService';
 import {UserService} from './component/services/guardService';
 import {childComponent} from './component/childComponent';
 import {ChildService} from './component/services/childService';
+import  {ContactPage} from './component/Contact';
 
 
 @NgModule({
-  imports:      [ BrowserModule,routing, FormsModule ],
-  declarations: [ AppComponent, productDisplay, ProductMain, CartComponent, CheckOut, LoginComponent, signUp, childComponent ],
+  imports:      [ BrowserModule,routing, FormsModule, ReactiveFormsModule ],
+  declarations: [ AppComponent, productDisplay, ProductMain, CartComponent, CheckOut, LoginComponent, signUp, childComponent, ContactPage ],
   bootstrap:    [ AppComponent ],
   providers:    [myService, OnlyLoggedInUsersGuard, UserService, ChildService]
 })

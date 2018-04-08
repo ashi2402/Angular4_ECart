@@ -22,7 +22,7 @@ import {Router} from '@angular/router';
         <li><a [routerLink]='["/list"]'>Dashboard</a></li>
         <li><a [routerLink]='["/main"]'>Home</a></li>
        <li><a [routerLink]='["/mobile"]'>Details</a></li>
-       
+       <li><a [routerLink]='["/contact"]'>Contact</a></li>
       </ul>
    
      <div class="pullright" style="margin-top:16px; color:#fff">
