@@ -9,7 +9,8 @@ import {Router} from '@angular/router';
   <nav class="navbar navbar-inverse navbar-fixed-top" *ngIf="userValidation.length!=0">
 
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+      data-target="#navbar" aria-expanded="false" aria-controls="navbar">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -35,7 +36,7 @@ import {Router} from '@angular/router';
   <router-outlet></router-outlet>
   `
 })
-export class AppComponent  { 
+export class AppComponent{ 
   constructor(private userService:myService, private router: Router) { }
   name:string ; 
   userValidation:string = '';
@@ -44,7 +45,7 @@ export class AppComponent  {
     this.name = this.userService.getUserName();
     this.userValidation = this.userService.getUserName();
   }
-logOut(){
+ logOut(){
   this.userService.setUserName('');
   this.router.navigate(['']);
 
